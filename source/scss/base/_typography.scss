@@ -1,0 +1,21 @@
+h1{
+    font-weight: $h1-font-weight;
+}
+
+p{
+    //line-height: 25px;
+    //line-height: 2.5rem;
+    margin: 0 0 10px;
+}
+.about, .skills{
+    p{
+        padding: 10px;
+        text-align: justify;
+    }
+}
+a{
+    outline: 0;
+    &:hover, &:active, &:focus{
+        outline: 0;
+    }
+}

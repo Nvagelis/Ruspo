@@ -1,0 +1,41 @@
+@import "base/variables-custom";  //Override bootstrap variables
+
+
+//bootstrap
+@import "bootstrap";
+
+
+//  base
+@import "base/resets";
+@import "base/typography";
+@import "base/icons";
+
+
+//healpers
+@import "helpers/mixins";
+@import "helpers/placeholders";
+
+
+// Layouts
+@import "layouts/grid";
+@import "layouts/navigation";
+@import "layouts/header-title";
+
+
+// Pages
+@import "pages/header";
+@import "pages/about";
+@import "pages/skills";
+@import "pages/experience";
+@import "pages/stats";
+@import "pages/services";
+@import "pages/portfolio";
+@import "pages/journal";
+@import "pages/contact";
+@import "pages/footer";
+
+
+//components
+
+@import "components/buttons";
+@import "components/animate";

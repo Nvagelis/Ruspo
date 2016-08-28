@@ -1,0 +1,42 @@
+@mixin bg-opacity($color, $alpha) {
+  $rgba: rgba($color, $alpha);
+  $ie-hex-str: ie-hex-str($rgba);
+  background-color: transparent;
+  zoom: 1;
+  background-color: $rgba;
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#{$ie-hex-str},endColorstr=#{$ie-hex-str});
+}
+
+@mixin section1-headers(){
+    @extend %section1-headers
+}
+
+@mixin res-font-size($font, $font-sm, $font-md){
+    font-size: $font;
+    @media (min-width: $screen-sm){
+        font-size: $font-sm;
+    }
+    @media (min-width: $screen-md){
+        font-size: $font-md;
+    }
+}
+@mixin h2-styles($color){
+    @extend %h2-styles;
+    color: $color;
+}
+
+@mixin line($color){
+    @extend %line-color;
+    background-color: $color; 
+}
+
+@mixin res-margin-bottom($mar, $mar-sm, $mar-md){
+    margin-bottom: $mar;
+    @media (min-width: $screen-sm){
+        margin-bottom: $mar-sm;
+    }
+    @media (min-width: $screen-md){
+        margin-bottom: $mar-md;
+    }
+}
+

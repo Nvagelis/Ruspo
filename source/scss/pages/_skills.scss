@@ -1,0 +1,47 @@
+.skills{
+    background-image: url('../images/skills.jpg');
+    background-size: cover;
+    background-position: 50%, 50%;
+    background-repeat: no-repeat;
+    header.title{
+        h2{
+            @include h2-styles($light-color);
+        }
+        &:after{
+            @include line($light-color);
+        }
+    }
+}
+.skill-text{
+    color: $light-color;
+}
+.list-group.skill-bars{
+    margin: 0;
+    padding: 15px 10px 0;
+    .list-group-item{
+        border: none;
+        margin-bottom: 30px;
+        padding: 15px 20px;
+        border-radius: 0;
+        overflow: hidden;
+        span{
+            font-weight: 700;
+            white-space: nowrap;
+        }
+        &:nth-child(1){
+            width: 90%;
+        }
+        &:nth-child(2){
+            width: 80%;
+        }
+        &:nth-child(3){
+            width: 60%;
+        }
+        &:nth-child(4){
+            width: 70%;
+        }
+        &:nth-child(5){
+            width: 30%;
+        }
+    }  
+}

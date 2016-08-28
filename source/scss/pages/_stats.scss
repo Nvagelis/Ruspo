@@ -1,0 +1,31 @@
+.stats{
+    background-image: url('../images/stats.jpg');
+    background-size: cover;
+    background-position: 50%, 50%;
+    background-repeat: no-repeat;
+    header.title{
+        h2{
+            @include h2-styles($light-color);
+        }
+        &:after{
+            @include line($light-color);
+        }
+    }
+}
+.icon-list{
+    li{
+        display: inline-block;
+        width: 50%;
+        margin-left: -3px;
+        text-align: center;
+        vertical-align: top;
+        @media(min-width: $screen-sm){
+            width: 25%;
+        }
+        span{
+            display: block;
+            color: $light-color;
+            margin: 30px 0;
+        }
+    }
+}

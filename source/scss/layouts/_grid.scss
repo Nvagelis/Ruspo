@@ -1,0 +1,42 @@
+html, body{
+    @include size(100%,100%);
+}
+body{
+    position: relative;
+}
+.cont-padding{
+    padding: 90px 0;
+}
+
+.wrap{
+    @include make-row(); 
+}
+.columns{
+    @include make-sm-column(6);
+}
+
+//service
+
+.big-col{
+    @include make-xs-column(6,0);
+    @media(max-width: $screen-xs){
+        width: 100%;
+    }
+}
+.small-col{
+    @include make-sm-column(6,0);
+}
+
+//journal
+
+.article-wrap{
+    @include make-sm-column(4);
+    @include make-md-column(3);
+        @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max){
+            &:nth-child(3n + 4) { clear: left; }
+        }
+        @media (min-width: $screen-md-min) {
+            &:nth-child(4n + 5) { clear: left; }
+        }
+}
+

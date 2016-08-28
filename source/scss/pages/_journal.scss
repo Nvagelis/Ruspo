@@ -1,0 +1,46 @@
+.journal{
+    header.title{
+        h2{
+            @include h2-styles($dark-color);
+        }
+        &:after{
+            @include line($dark-color);
+        }
+    }
+}
+.journal{
+    .cont-padding{
+        padding-bottom: 5px;
+    }
+}
+.journal{
+    .article-wrap{
+        margin-bottom: 30px;
+    }
+}
+.blog-post{
+    header{
+        position: relative;
+        border-bottom: 5px solid $red-color;
+        img{
+            width: 100% !important;
+        }
+        span{
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 5px 10px;
+            background-color: $red-color;
+            color: $light-color;
+        }
+    }
+}
+.article-body{
+    background-color: #ddd;
+    padding: 15px 25px;
+    h3{
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+}

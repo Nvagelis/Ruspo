@@ -1,0 +1,53 @@
+.portfolio{
+    header.title{
+        h2{
+            @include h2-styles($dark-color);
+        }
+        &:after{
+            @include line($dark-color);
+        }
+    }
+}
+.portfolio{
+    .cont-padding{
+        padding-bottom: 0;
+    }
+}
+
+
+.portfolio{
+    a{
+        display: block;
+        position: relative;
+    }
+    .photo-overlay{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        @include bg-opacity($dark-color, 0.7);
+        transition: opacity .5s ease-in-out;
+        &:hover{
+            opacity: 1;
+            transition: opacity .5s ease-in-out;
+        }
+    }
+}
+.photo-overlay{
+    span{
+        display: block;
+        position: relative;
+        text-align: center;
+        color: $light-color;
+    }
+    span:nth-child(1){
+        font-size: 36px;
+        top: 50%;
+    }
+    span:nth-child(2){
+        top: 70%;
+        
+    }
+}

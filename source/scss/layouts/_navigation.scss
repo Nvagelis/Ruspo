@@ -1,0 +1,101 @@
+.navbar-fixed-top{
+    transition: all 1s;
+    .navbar-collapse{
+        //max-height: none;
+    }
+}
+
+.navbar{
+    .icon{
+        width: 20px;
+        height: 20px;
+        vertical-align: sub;
+        margin-left: 15px;
+        @media (min-width: $screen-sm){
+            display: none;
+        }
+    }
+}
+.navbar-default{
+    background-color: $light-color;
+    border-color: $grey-color;
+    box-shadow: 0 0 8px $grey-color;
+}
+.navbar-default .navbar-nav > li > a {
+    color: $dark-color;
+}
+.navbar-default .navbar-nav > li > a:hover
+ {
+    color: $red-color;
+}
+.navbar-default .navbar-nav > li > a:focus{
+    color: $dark-color;
+}
+.navbar-default .navbar-nav > .active > a, 
+.navbar-default .navbar-nav > .active > a:hover, 
+.navbar-default .navbar-nav > .active > a:focus {
+    color: $red-color;
+    background-color: transparent;
+}
+
+.navbar-default{
+    .navbar-toggle{
+        &:hover, &:focus{
+            background-color: transparent;
+        }
+    }
+}
+.navbar-default .navbar-toggle .icon-bar{
+    background-color: $red-color;
+}
+.navbar-default .navbar-toggle {
+    //border-color: $red-color;
+    border-color: $light-color;
+}
+
+.navbar-nav{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.navbar-brand{
+    height: auto;
+    div:nth-child(1){
+        color: $dark-color;;
+        font-size: 24px;
+        font-weight: 300;
+        line-height: 24px;
+        span{
+            font-weight: 700;
+        }
+    }
+    div:nth-child(2){
+        color: $red-color;
+        font-size: 14px;
+        display: none;
+        @media (min-width: $screen-sm){
+            display: block;
+        }
+    }
+}
+.nav{
+    >li{
+        padding-top: 0;
+        padding-bottom: 0;
+        @media (min-width: $screen-sm){
+            padding-top: 12px;
+            padding-bottom: 12px;
+        }
+        >a{
+            padding-left: 7px;
+            padding-right: 8px; 
+        }
+        &:last-child a{
+                padding-right: 15px;
+            }
+    }
+}
+.menu-hide{
+    top: -75px;
+    transition: all 1s;
+}

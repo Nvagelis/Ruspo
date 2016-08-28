@@ -1,0 +1,16 @@
+.footer{
+    border-top: 1px solid $grey-color;
+    box-shadow: 0 0 8px $grey-color;
+}
+.footer-content{
+    padding: 30px 0;
+    color: $dark-color;
+    @include clearfix();
+    .copyrights{
+        float: left;
+    }
+    .author{
+        float: right;
+    }
+}
+

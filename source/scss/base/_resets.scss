@@ -1,0 +1,11 @@
+h1,h2,h3{
+    margin: 0;
+}
+ul{
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+img{
+    @include img-responsive(block);
+}

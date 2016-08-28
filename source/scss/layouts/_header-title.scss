@@ -1,0 +1,12 @@
+header.title{
+    text-align: center;
+    margin-bottom: 70px;
+    position: relative;
+    padding-bottom: 10px; //gia to margin collapse
+    .sub-info{
+        display: block;
+        color: $red-color;
+        margin-bottom: 15px;
+    }
+}
+

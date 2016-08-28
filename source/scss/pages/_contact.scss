@@ -1,0 +1,33 @@
+.contact{
+    header.title{
+        h2{
+            @include h2-styles($dark-color);
+        }
+        &:after{
+            @include line($dark-color);
+        }
+    }
+}
+.main-form{
+    width: 100%;
+    @media (min-width: $screen-sm){
+        width: 60%;
+    }
+    @include center-block();
+    .form-control{
+        height: auto;
+        font-size: 24px;
+        background-color: $light-color;
+        &:focus{
+            border-color: $grey-color;
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(221, 221, 221, 0.6)
+        }
+    }
+    .input-group{
+        margin-bottom: 30px;
+    }
+    .btm-center{
+        text-align: center;
+    }
+}
+
