@@ -1,11 +1,11 @@
 /* requires */
 /*
  * 
- * first run gulp build 
+ * run gulp build 
  *      download bower components
  *      add bootastrap assets to source
  *      
- * after that run gulp
+ * run gulp
  * 
  * */
 var gulp = require('gulp'),
@@ -24,13 +24,6 @@ var config = {
     maps: 'maps'
 };
 
-/********** bower ***********/
-/* install bower components */
-/****************************/
-gulp.task('bower', function() {
-    return bower()
-        .pipe(gulp.dest(config.bowerDir));  /* or .bowerrc */
-});
 /************** copy ***************/
 /* copy bootstrap assets to source */
 /***********************************/
@@ -51,17 +44,17 @@ gulp.task('copy:fonts',['bower'], function() {
 gulp.task('scripts', function () {
     return gulp.src(config.sourceDir + '/js/**/*.js')
         .pipe(plumber())
-        //.pipe(sourcemaps.init())
+        .pipe(sourcemaps.init())
         .pipe(rename({suffix:'.min'}))
         .pipe(uglify())
-        //.pipe(sourcemaps.write(config.maps))
+        .pipe(sourcemaps.write(config.maps))
         .pipe(gulp.dest(config.publicDir + '/js'));
 });
 /********** styles ************/
 /* scss to css, map, prefixer */
 /******************************/
 gulp.task('styles', function (){
-    return sass(config.sourceDir + '/scss/style.scss', {style: 'expanded',sourcemap: true})  /* or style: 'compressed' */
+    return sass(config.sourceDir + '/scss/style.scss', {style: 'compressed',sourcemap: true})  /* or style: 'compressed' 'expanded' */
         .pipe(plumber())
         .pipe(sourcemaps.init())
         //.on('error', sass.logError)
